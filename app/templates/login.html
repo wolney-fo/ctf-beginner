@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Sign in &middot; Nimbus{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Sign in</h1>
+  <p class="muted">Use your staff credentials.</p>
+  <form method="post" action="{{ url_for('login') }}">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" autocomplete="off" autofocus>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">Sign in</button>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+  </form>
+</div>
+{% endblock %}

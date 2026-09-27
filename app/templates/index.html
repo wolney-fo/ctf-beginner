@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<!--
+  Nimbus Internal Portal
+  TODO(dev): remove development notes before the final deploy.
+  staging environment: {{ recon_flag }}
+-->
+<div class="card hero">
+  <h1>Nimbus Logistics Internal Portal</h1>
+  <p>Route, delivery and team management system. Access restricted to authorized staff.</p>
+  <a class="btn" href="{{ url_for('login') }}">Access my account</a>
+</div>
+<div class="card">
+  <h2>Announcements</h2>
+  <p class="muted">We are migrating the portal to version 2.3. If you run into access
+  issues, contact the IT team. Old system backups are being archived gradually.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Dashboard &middot; Nimbus{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Hello, {{ username }}</h1>
+  <p class="muted">Welcome to your dashboard. Your internal identifier is <strong>#{{ uid }}</strong>.</p>
+  <p><a class="btn" href="{{ url_for('profile') }}">View my profile</a></p>
+</div>
+<div class="card">
+  <h2>Recent activity</h2>
+  <table>
+    <tr><th>Date</th><th>Event</th></tr>
+    <tr><td>Today</td><td>Portal login</td></tr>
+    <tr><td>Yesterday</td><td>Route update #A-204</td></tr>
+    <tr><td>2 days ago</td><td>Weekly report submitted</td></tr>
+  </table>
+</div>
+{% if auth_flag %}
+<div class="card">
+  <h2>Administrative area</h2>
+  <p class="muted">You are authenticated as a system administrator.</p>
+  <div class="flag">{{ auth_flag }}</div>
+</div>
+{% endif %}
+{% endblock %}
