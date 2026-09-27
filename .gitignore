@@ -1,0 +1,20 @@
+# ==== SPOILERS / SEGREDOS - NUNCA COMMITAR ====
+# Gabarito das falhas e progresso das flags ficam so na maquina local.
+VULNERABILITIES.md
+flags.md
+
+# Artefatos gerados no deploy (contem os valores reais das flags)
+app/flags.json
+app/nimbus.db
+app/static/old_backups/app.py.bak
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# Sistema
+.DS_Store
+*.log

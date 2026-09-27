@@ -1,0 +1,81 @@
+:root {
+  --bg: #0f1720;
+  --panel: #16212e;
+  --accent: #2f9e8f;
+  --accent-2: #3b82f6;
+  --text: #e6edf3;
+  --muted: #8b98a5;
+  --border: #24313f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+header.topbar {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { font-weight: 700; letter-spacing: .5px; color: var(--text); text-decoration: none; }
+.brand span { color: var(--accent); }
+nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 14px; }
+nav a:hover { color: var(--text); }
+.container { max-width: 880px; margin: 40px auto; padding: 0 24px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  margin-bottom: 22px;
+}
+h1 { font-size: 26px; margin-top: 0; }
+h2 { font-size: 20px; }
+label { display: block; font-size: 13px; color: var(--muted); margin: 14px 0 6px; }
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0c141d;
+  color: var(--text);
+  font-size: 15px;
+}
+button, .btn {
+  margin-top: 20px;
+  background: var(--accent);
+  color: #04120f;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+button:hover, .btn:hover { filter: brightness(1.08); }
+.error { color: #f78a8a; font-size: 14px; margin-top: 12px; }
+.muted { color: var(--muted); font-size: 14px; }
+table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 14px; }
+th { color: var(--muted); font-weight: 600; }
+.flag {
+  background: #04120f;
+  border: 1px dashed var(--accent);
+  color: var(--accent);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  margin-top: 16px;
+  word-break: break-all;
+}
+.hero { text-align: center; padding: 30px 0; }
+.hero p { color: var(--muted); max-width: 520px; margin: 12px auto; }
+footer { text-align: center; color: var(--muted); font-size: 12px; padding: 30px; }

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Nimbus Logistics{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ url_for('index') }}">NIMBUS<span>·</span>LOGISTICS</a>
+    <nav>
+      <a href="{{ url_for('index') }}">Inicio</a>
+      <a href="{{ url_for('dashboard') }}">Painel</a>
+      <a href="{{ url_for('login') }}">Entrar</a>
+      <a href="{{ url_for('logout') }}">Sair</a>
+    </nav>
+  </header>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+  <footer>Nimbus Logistics Internal Portal &middot; v2.3.1 &middot; uso interno</footer>
+</body>
+</html>

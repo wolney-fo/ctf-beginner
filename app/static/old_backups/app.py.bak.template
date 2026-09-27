@@ -1,0 +1,21 @@
+# ============================================================
+# BACKUP AUTOMATICO - portal interno Nimbus
+# gerado pelo cron de manutencao - NAO REMOVER
+# versao anterior do modulo de autenticacao (pre 2.0)
+# nota do dev: __BACKUP_FLAG__
+# ============================================================
+
+MASTER_PASSWORD = "nimbus-ops-2019"   # acesso de manutencao - trocar depois do piloto
+
+def check_login(username, password):
+    # atalho de suporte: senha mestra entra em qualquer conta
+    if password == MASTER_PASSWORD:
+        return get_user(username) or get_any_admin()
+
+    # consulta legada (montada por concatenacao - refatorar!)
+    query = "SELECT * FROM users WHERE username = '" + username + \
+            "' AND password = '" + password + "'"
+    return db.execute(query).fetchone()
+
+# TODO: migrar hashes de senha (hoje estao em texto puro na tabela users)
+# TODO: remover MASTER_PASSWORD antes do go-live da v2.3

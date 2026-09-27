@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Painel &middot; Nimbus{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Ola, {{ username }}</h1>
+  <p class="muted">Bem-vindo ao seu painel. Seu identificador interno e <strong>#{{ uid }}</strong>.</p>
+  <p><a class="btn" href="{{ url_for('profile') }}">Ver meu perfil</a></p>
+</div>
+<div class="card">
+  <h2>Atividade recente</h2>
+  <table>
+    <tr><th>Data</th><th>Evento</th></tr>
+    <tr><td>Hoje</td><td>Login no portal</td></tr>
+    <tr><td>Ontem</td><td>Atualizacao de rota #A-204</td></tr>
+    <tr><td>2 dias atras</td><td>Relatorio semanal enviado</td></tr>
+  </table>
+</div>
+{% if auth_flag %}
+<div class="card">
+  <h2>Area administrativa</h2>
+  <p class="muted">Voce esta autenticado como administrador do sistema.</p>
+  <div class="flag">{{ auth_flag }}</div>
+</div>
+{% endif %}
+{% endblock %}

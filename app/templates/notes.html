@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Notas internas &middot; Nimbus{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Notas internas de desenvolvimento</h1>
+  <p class="muted">Pagina temporaria usada pela equipe de TI durante a migracao. Nao indexar.</p>
+  <ul>
+    <li>Migrar autenticacao legada para o novo servico de identidade (pendente).</li>
+    <li>Remover credenciais de manutencao do codigo antes do go-live.</li>
+    <li>Arquivar backups antigos que ainda estao acessiveis publicamente.</li>
+  </ul>
+  <h2>Nota de handover</h2>
+  <div class="flag">{{ flag }}</div>
+</div>
+{% endblock %}

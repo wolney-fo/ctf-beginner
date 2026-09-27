@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Perfil &middot; Nimbus{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Perfil do colaborador</h1>
+  <table>
+    <tr><th>ID</th><td>{{ user["id"] }}</td></tr>
+    <tr><th>Usuario</th><td>{{ user["username"] }}</td></tr>
+    <tr><th>Cargo</th><td>{{ user["role"] }}</td></tr>
+    <tr><th>Email</th><td>{{ user["email"] }}</td></tr>
+    <tr><th>Notas</th><td>{{ user["notes"] }}</td></tr>
+  </table>
+  <p class="muted" style="margin-top:18px">Dica: seu perfil e identificado pelo parametro <code>id</code> na URL.</p>
+</div>
+{% endblock %}

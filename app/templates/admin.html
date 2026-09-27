@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Admin &middot; Nimbus{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Painel Administrativo</h1>
+  <p class="muted">Gestao de contas de colaboradores. Area restrita.</p>
+  <table>
+    <tr><th>ID</th><th>Usuario</th><th>Cargo</th><th>Email</th></tr>
+    {% for u in users %}
+    <tr>
+      <td>{{ u["id"] }}</td>
+      <td>{{ u["username"] }}</td>
+      <td>{{ u["role"] }}</td>
+      <td>{{ u["email"] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+<div class="card">
+  <h2>Token de acesso administrativo</h2>
+  <div class="flag">{{ flag }}</div>
+</div>
+{% endblock %}
